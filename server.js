@@ -2,7 +2,9 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 const path = require('path');
-require('dotenv').config(); // Завантажуємо змінні середовища
+const bodyParser = require('body-parser'); 
+const bookRoutes = require('./routes/books'); 
+require('dotenv').config(); 
 
 const connectDB = require('./config/db'); // Підключення до бази даних
 
@@ -12,6 +14,7 @@ const userRoutes = require('./routes/userRoutes');
 const accountRoutes = require('./routes/accountRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
 const budgetRoutes = require('./routes/budgetRoutes');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
