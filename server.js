@@ -2,8 +2,6 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 const path = require('path');
-const bodyParser = require('body-parser'); 
-const bookRoutes = require('./routes/books'); 
 require('dotenv').config(); 
 
 const connectDB = require('./config/db'); // Підключення до бази даних
